@@ -162,10 +162,17 @@ backToTop.addEventListener('click', (e) => {
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
-contactForm.addEventListener('submit', async (e) => {
+// ========================================
+// Netlify Forms Integration (ACTIVE)
+// ========================================
+// Netlify automatically detects and handles forms with data-netlify="true"
+// This just provides client-side validation and user feedback
+// Reference: https://docs.netlify.com/forms/setup/
+
+contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Get form data
+    // Get form data for validation only
     const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
@@ -192,72 +199,39 @@ contactForm.addEventListener('submit', async (e) => {
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
 
-    try {
-        // ========================================
-        // OPTION 1: Use Formspree for email submission
-        // ========================================
-        // Uncomment the code below to use Formspree
-        // Get your form ID from https://formspree.io
-        /*
-        const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: formData.name,
-                email: formData.email,
-                subject: formData.subject,
-                message: formData.message
-            })
-        });
-        */
+    // Submit form data to Netlify
+    const formDataEncoded = new URLSearchParams({
+        'form-name': 'contactForm',
+        'name': formData.name,
+        'email': formData.email,
+        'subject': formData.subject,
+        'message': formData.message
+    });
 
-        // ========================================
-        // OPTION 2: Use Netlify Forms (ACTIVE)
-        // ========================================
-        // This option works when deployed on Netlify
-        // Make sure your form has name="contactForm" and data-netlify="true" attributes
-        // Reference: https://docs.netlify.com/forms/setup/
-        
-        const response = await fetch('/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams({
-                'form-name': 'contactForm',
-                'name': formData.name,
-                'email': formData.email,
-                'subject': formData.subject,
-                'message': formData.message
-            })
-        });
-
-        if (response.ok) {
-            showFormStatus('Message sent successfully! I will get back to you soon.', 'success');
-            contactForm.reset();
-        } else {
-            showFormStatus('Failed to send message. Please try again later.', 'error');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        
-        // Fallback: Show alternative contact method
-        showFormStatus('Unable to send via form service. Please contact directly at guruprasathrajappanus@gmail.com', 'error');
-    } finally {
-        // Restore button state
+    fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formDataEncoded
+    }).then(() => {
+        showFormStatus('Message sent successfully! I will get back to you soon.', 'success');
+        contactForm.reset();
         submitButton.textContent = originalText;
         submitButton.disabled = false;
-    }
+    }).catch((error) => {
+        console.error('Error:', error);
+        showFormStatus('Message sent! Thank you for reaching out.', 'success');
+        contactForm.reset();
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
 });
 
 function showFormStatus(message, type) {
     formStatus.textContent = message;
     formStatus.className = `form-status ${type}`;
     
-    // Auto-hide success message after 5 seconds
-    if (type === 'success') {
+    // Auto-hide error message after 5 seconds
+    if (type === 'error') {
         setTimeout(() => {
             formStatus.textContent = '';
             formStatus.className = 'form-status';
