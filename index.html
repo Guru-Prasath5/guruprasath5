@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guru Prasath - Senior Full-Stack Developer | Enterprise Solutions Architect with 8+ years of experience">
+    <meta name="keywords" content="Developer, Full-Stack, Java, Python, Cloud, AWS, Azure, Wipro, Enterprise">
+    <meta name="author" content="Guru Prasath">
+    <title>Guru Prasath - Senior Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Typing Animation Loader -->
+    <div class="loader-container" id="loaderContainer">
+        <div class="typing-loader">
+            <span class="typing-text" id="typingText"></span>
+            <span class="typing-cursor"></span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="assets/images/GC.png" alt="Profile" class="nav-profile-pic">
+                <h1>Guru Prasath</h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="assets/documents/GuruPrasath_2026.pdf" id="downloadResume" class="download-btn" download>📥 Resume</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+            <div class="hero-content">
+            <!-- <div class="profile-pic-container">
+                <img src="assets/images/GC.png" alt="Guru Prasath - Profile Picture" class="profile-pic">
+            </div> -->
+            <h2 class="hero-title">Guru Prasath R</h2>
+            <p class="hero-subtitle">Development Lead | Senior Software Engineer</p>
+            <p class="hero-description">10+ Years Building Enterprise-Scale Solutions | Java, Spring Boot, Microservices & Full-Stack Development</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Senior Software Engineer and Development Lead with 10+ years of experience designing, developing, and modernizing enterprise-scale applications. I specialize in building robust, scalable solutions using Java, Spring Boot, microservices architecture, and modern frontend technologies like React.js.
+                    </p>
+                    <p>
+                        At Wipro Technologies, I have led end-to-end delivery of mission-critical systems for Best Buy, including legacy-to-microservices migration, full-stack development, and production support for large US enterprises. I have successfully architected and delivered 60+ microservices, managed 4 core monolithic applications, and led teams through Agile/Scrum methodologies.
+                    </p>
+                    <p>
+                        I am passionate about security, reliability, and performance. My expertise spans backend microservices, frontend development, AI-powered solutions, DevOps, and enterprise integration. I am committed to writing clean, maintainable code and fostering technical excellence across teams.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>60+</h3>
+                        <p>Microservices Delivered</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4</h3>
+                        <p>Core Apps Managed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Backend Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Java 8-17</li>
+                        <li>Spring Boot</li>
+                        <li>REST APIs</li>
+                        <li>Microservices</li>
+                        <li>Hibernate</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li>React.js</li>
+                        <li>Redux</li>
+                        <li>Micro Frontends</li>
+                        <li>HTML5 & CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & Generative AI</h3>
+                    <ul class="skill-list">
+                        <li>Generative AI</li>
+                        <li>Enterprise AI Assistants</li>
+                        <li>Knowledge Retrieval Systems</li>
+                        <li>Contextual Data Grounding</li>
+                        <li>AI POCs</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases & Security</h3>
+                    <ul class="skill-list">
+                        <li>Oracle SQL</li>
+                        <li>MySQL</li>
+                        <li>Secure Coding</li>
+                        <li>PCI Compliance</li>
+                        <li>CyberArk & SSO</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Integration & Monitoring</h3>
+                    <ul class="skill-list">
+                        <li>Apache NiFi</li>
+                        <li>Kibana</li>
+                        <li>Log Parsing</li>
+                        <li>Data Flow Automation</li>
+                        <li>Real-time Monitoring</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & Build Tools</h3>
+                    <ul class="skill-list">
+                        <li>Jenkins</li>
+                        <li>Tomcat</li>
+                        <li>OpenShift</li>
+                        <li>Maven & Gradle</li>
+                        <li>NPM & Linux</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <!-- Experience 1 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Full-Stack Developer & Technical Lead - Best Buy Direct Core</h3>
+                        <span class="experience-date">2022 - Present</span>
+                    </div>
+                    <div class="experience-body">
+                        <p><strong>Organization:</strong> Wipro Technologies | Client: Best Buy (Minneapolis, USA)</p>
+                        <p>
+                            Owned and supported the Direct Core platform with 60+ microservices and 4 core monolithic applications. Delivered full-stack solutions combining backend microservices with modern frontend applications.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Owned end-to-end system design, development, deployment, and production stability</li>
+                            <li>Designed and implemented Micro Frontend architectures for independent deployments</li>
+                            <li>Implemented PingFederate SSO for secure and centralized authentication</li>
+                            <li>Provided technical leadership, code reviews, and production support for critical systems</li>
+                            <li>Collaborated with UX, backend, platform, and infrastructure teams for high-performing applications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Senior Engineer - Client Partner Integration</h3>
+                        <span class="experience-date">2019 - 2022</span>
+                    </div>
+                    <div class="experience-body">
+                        <p><strong>Organization:</strong> Wipro Technologies | Client: Best Buy</p>
+                        <p>
+                            Led end-to-end development of enterprise applications using Java 8, Spring Boot, and RESTful microservices. Migrated legacy Comergent monolithic applications to microservice architecture.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Onboarded multiple external client partners into the Procurement System</li>
+                            <li>Owned full SDLC including solution design, development, deployment, and incident resolution</li>
+                            <li>Learned React.js during the project and helped the team upskill into full-stack developers</li>
+                            <li>Developed React.js and Redux-based user interfaces for improved customer experience</li>
+                            <li>Migrated legacy monolithic applications to microservice architecture, improving scalability</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Software Engineer – L1 - Resourcing & Operations</h3>
+                        <span class="experience-date">2017 - 2019</span>
+                    </div>
+                    <div class="experience-body">
+                        <p><strong>Organization:</strong> Wipro Technologies | Client: Best Buy</p>
+                        <p>
+                            Integrated Resourcing systems with Order Management System (OMS) to support automated sourcing workflows. Converted manual resourcing processes into fully automated solutions.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Integrated Resourcing systems with OMS for automated sourcing workflows</li>
+                            <li>Converted manual resourcing processes into fully automated solutions, improving operational efficiency</li>
+                            <li>Implemented advanced sourcing automation features, contributing to increased revenue</li>
+                            <li>Developed and migrated return, refund, and allowance functionalities within OMS integrations</li>
+                            <li>Worked as part of Security and Compliance team to ensure enterprise security standards</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Software Engineer – L1 - Banking & Transaction Processing</h3>
+                        <span class="experience-date">2015 - 2017</span>
+                    </div>
+                    <div class="experience-body">
+                        <p><strong>Organization:</strong> Suncorp (Banking) | Client: Suncorp | Location: Pune, India</p>
+                        <p>
+                            Contributed to the IGNITE Program migrating legacy Hogan systems to Oracle Banking Products. Implemented and supported credit and debit transaction processing.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Developed backend services using Java and Hibernate</li>
+                            <li>Implemented frontend components using Oracle ADF UI</li>
+                            <li>Worked on ACT (Account, Card, Transaction) team for transaction processing</li>
+                            <li>Developed and supported BAT_11 batch processes for transaction file generation</li>
+                            <li>Implemented automated document generation for customer onboarding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Key Projects & Achievements</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="security">Security</button>
+                <button class="filter-btn" data-filter="react">React</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-technology="java">
+                    <div class="project-header">
+                        <h3>AI-Powered Self Project</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Designed and implemented an internal AI knowledge assistant to enable employees to query enterprise documents using natural language while ensuring data privacy.</p>
+                        <div class="project-tags">
+                            <span class="tag">Generative AI</span>
+                            <span class="tag">Enterprise AI</span>
+                            <span class="tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-technology="security">
+                    <div class="project-header">
+                        <h3>Security & Compliance Integration</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Integrated CyberArk for secure secrets and credential management. Implemented secure coding practices and PCI compliance standards across applications.</p>
+                        <div class="project-tags">
+                            <span class="tag">CyberArk</span>
+                            <span class="tag">PCI Compliance</span>
+                            <span class="tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-technology="java">
+                    <div class="project-header">
+                        <h3>Micro Frontend Architecture Implementation</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Delivered full-stack solutions combining backend microservices and modern frontend applications. Implemented Micro Frontend architectures for modular UI delivery and independent deployments.</p>
+                        <div class="project-tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Microservices</span>
+                            <span class="tag">Full-Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-technology="react">
+                    <div class="project-header">
+                        <h3>Apache NiFi & Kibana Integration</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Implemented Apache NiFi pipelines for data flow automation and system integration. Built Kibana dashboards for centralized logging, real-time monitoring, and faster root cause analysis.</p>
+                        <div class="project-tags">
+                            <span class="tag">Apache NiFi</span>
+                            <span class="tag">Kibana</span>
+                            <span class="tag">Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-technology="security">
+                    <div class="project-header">
+                        <h3>PingFederate SSO Implementation</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Implemented PingFederate SSO for secure and centralized authentication. Enabled single sign-on capabilities across enterprise applications for improved security and user experience.</p>
+                        <div class="project-tags">
+                            <span class="tag">PingFederate</span>
+                            <span class="tag">SSO</span>
+                            <span class="tag">Authentication</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-technology="java">
+                    <div class="project-header">
+                        <h3>Legacy-to-Microservices Migration</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Led migration of legacy Comergent monolithic applications to microservice architecture. Improved scalability, maintainability, and enabled independent deployment of services.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Migration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <h3>Master of Technology (Computer Science)</h3>
+                    <p class="education-details">Birla Institute of Technology and Science (BITS) | 2016 – 2019 | CGPA: 6.0</p>
+                    <p>Advanced studies in computer science with focus on software design, algorithms, and enterprise systems architecture.</p>
+                </div>
+                <div class="certification-divider"></div>
+                <div class="education-item">
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <p class="education-details">Dr. NGP College, Coimbatore | 2012 – 2015 | CGPA: 7.0</p>
+                    <p>Comprehensive foundation in computer science fundamentals, data structures, algorithms, and software engineering principles.</p>
+                </div>
+                <div class="certification-divider"></div>
+                <div class="education-item">
+                    <h3>Certifications & Awards</h3>
+                    <ul class="certification-list">
+                        <li>Certified Microservices Developer – Wipro (2019)</li>
+                        <li>Relentless Execution Award – Wipro (2016)</li>
+                        <li>Inspiring Performance Award – Wipro (2025)</li>
+                        <li>Victory League Award – Wipro (2025)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4>Email</h4>
+                            <a href="mailto:guruprasathrajappanus@gmail.com">guruprasathrajappanus@gmail.com</a>
+                        </div>
+                        <div class="contact-method">
+                            <h4>Phone</h4>
+                            <a href="tel:+19522459369">+1 (952) 245-9369</a>
+                        </div>
+                        <div class="contact-method">
+                            <h4>Social Links</h4>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/guru-prasath-a6573999" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/Guru-Prasath5" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://twitter.com/guruprasath" target="_blank" rel="noopener noreferrer" class="social-icon" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Send Me a Message</h3>
+                    <!-- Netlify Form Configuration -->
+                    <form class="contact-form" id="contactForm" name="contactForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Honeypot field for spam protection -->
+                        <input type="hidden" name="bot-field">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Guru Prasath</h4>
+                    <p>Senior Full-Stack Developer | Enterprise Solutions Architect</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/guru-prasath-a6573999" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/Guru-Prasath5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://twitter.com/guruprasath" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Guru Prasath. All rights reserved.</p>
+                <a href="#home" class="back-to-top" id="backToTop">↑ Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
