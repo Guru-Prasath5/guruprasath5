@@ -1,0 +1,14 @@
+[build]
+  command = "echo 'Static site - no build required'"
+  publish = "."
+
+[[forms]]
+  name = "contactForm"
+  method = "POST"
+  action = "/"
+
+[context.production]
+  command = "echo 'Production build'"
+
+[context.deploy-preview]
+  command = "echo 'Deploy preview build'"
